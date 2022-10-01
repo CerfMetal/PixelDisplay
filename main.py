@@ -10,7 +10,7 @@ ldrPin = 27
 ledPanelPin = 28
  
 # Servers to ping
-servers = [["Printer", "ender3.local"], ["NAS", "192.168.0.200"], ["Windows", "192.168.0.18"]]
+servers = [["Printer", "..."], ["NAS", "..."], ["Windows", "..."]]
 
 # LEDS Setup
 numpix = 30
@@ -106,7 +106,7 @@ def animation(name, color, sleep, remove) :
 def printer(job) :
     # Store print job data
     try:
-        r = urequests.get("http://ender3.local/api/job?apikey=A4F9884E98E2423E8785804BA55EA49C").json()
+        r = urequests.get("...").json()
         print(f"[] Printer online")
         return r
     except:
@@ -146,7 +146,7 @@ def ping(name, ip) :
 def weather() :
     # Try getting weather data
     try :
-        weatherData = urequests.get("https://api.openweathermap.org/data/2.5/onecall?lat=43.71&lon=-79.40&exclude=minutely,hourly,daily,alerts&appid=091c1c606fd3b045516e0779aaca0768").json()
+        weatherData = urequests.get("...").json()
     except :
         # Return error
         print("[Weather] Error while gathering weather data")
